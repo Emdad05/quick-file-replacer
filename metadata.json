@@ -1,0 +1,6 @@
+{
+  "name": "Quick Replacer",
+  "description": "Elevated file replacer with floating button supporting ADB, Shizuku, and Root",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

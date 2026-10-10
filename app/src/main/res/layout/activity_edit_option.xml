@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/qr_background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/qr_surface">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_edit"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_close"
+            app:navigationIconTint="@color/qr_text_primary"
+            app:title="@string/edit_option_title_new"
+            app:titleTextColor="@color/qr_text_primary" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Name Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_name"
+                style="@com.google.android.material.R.style.Widget_Material3_TextInputLayout_OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/hint_option_name"
+                app:boxStrokeColor="@color/qr_primary"
+                app:hintTextColor="@color/qr_primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/qr_text_primary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Source Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_source"
+                style="@com.google.android.material.R.style.Widget_Material3_TextInputLayout_OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="@string/hint_source_path"
+                app:boxStrokeColor="@color/qr_primary"
+                app:hintTextColor="@color/qr_primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_source"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textUri"
+                    android:textColor="@color/qr_text_primary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_browse_file"
+                    style="@com.google.android.material.R.style.Widget_Material3_Button_TonalButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="6dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_browse_file"
+                    android:textColor="@color/qr_primary"
+                    app:backgroundTint="#1E3A8A"
+                    app:cornerRadius="8dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_pick_folder"
+                    style="@com.google.android.material.R.style.Widget_Material3_Button_OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/btn_pick_folder"
+                    android:textColor="@color/qr_text_primary"
+                    app:cornerRadius="8dp"
+                    app:strokeColor="@color/qr_surface_card_stroke" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/helper_source_note"
+                android:textColor="@color/qr_text_muted"
+                android:textSize="12sp" />
+
+            <!-- Destination Input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_destination"
+                style="@com.google.android.material.R.style.Widget_Material3_TextInputLayout_OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:hint="@string/hint_dest_path"
+                app:boxStrokeColor="@color/qr_primary"
+                app:helperText="@string/hint_dest_example"
+                app:helperTextTextColor="@color/qr_text_muted"
+                app:hintTextColor="@color/qr_primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_destination"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textUri"
+                    android:textColor="@color/qr_text_primary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Target Package Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_package"
+                style="@com.google.android.material.R.style.Widget_Material3_TextInputLayout_OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:hint="@string/hint_pkg_name"
+                app:boxStrokeColor="@color/qr_primary"
+                app:hintTextColor="@color/qr_primary">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_package"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textNoSuggestions"
+                    android:textColor="@color/qr_text_primary" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Checkboxes Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardBackgroundColor="@color/qr_surface_card"
+                app:cardCornerRadius="14dp"
+                app:strokeColor="@color/qr_surface_card_stroke"
+                app:strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cb_force_stop"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/chk_force_stop"
+                        android:textColor="@color/qr_text_primary" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cb_backup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/chk_backup"
+                        android:textColor="@color/qr_text_primary" />
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cb_fix_permissions"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/chk_fix_perms"
+                        android:textColor="@color/qr_text_primary" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Action Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_cancel"
+                    style="@com.google.android.material.R.style.Widget_Material3_Button_OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:text="@string/btn_cancel"
+                    android:textColor="@color/qr_text_primary"
+                    app:cornerRadius="10dp"
+                    app:strokeColor="@color/qr_surface_card_stroke" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_save"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1.5"
+                    android:text="@string/btn_save"
+                    android:textColor="@color/qr_background"
+                    app:backgroundTint="@color/qr_primary"
+                    app:cornerRadius="10dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">Quick Replacer</string>
+    <string name="status_card_title">Elevated Access &amp; Permissions</string>
+    <string name="mode_selector_title">Execution Backend Mode</string>
+    <string name="mode_auto">Auto (ADB → Shizuku → Root)</string>
+    <string name="mode_adb_only">Built-in ADB only</string>
+    <string name="mode_shizuku_only">Shizuku only</string>
+    <string name="mode_root_only">Root only</string>
+    <string name="options_list_title">Replacement Options</string>
+    <string name="btn_add_option">+ Add Option</string>
+    <string name="switch_floating_service">Show floating icon</string>
+    <string name="menu_export">Export options</string>
+    <string name="menu_import">Import options</string>
+    <string name="menu_setup_guide">Setup guide</string>
+    <string name="btn_grant">Grant</string>
+    <string name="status_granted">Granted</string>
+    <string name="status_missing">Missing</string>
+
+    <!-- ADB -->
+    <string name="adb_label">Built-in ADB:</string>
+    <string name="adb_status_connected">Connected</string>
+    <string name="adb_status_disconnected">Not connected</string>
+    <string name="adb_status_unpaired">Not paired</string>
+    <string name="btn_pair">Pair</string>
+    <string name="btn_connect">Connect</string>
+    <string name="btn_dev_options">Developer options</string>
+    <string name="dialog_pair_title">Pair Wireless Debugging</string>
+    <string name="dialog_pair_port_hint">Pairing port (e.g. 37123)</string>
+    <string name="dialog_pair_code_hint">6-digit pairing code</string>
+    <string name="dialog_connect_title">Connect ADB</string>
+    <string name="dialog_connect_port_hint">Connect port (e.g. 41235)</string>
+
+    <!-- Shizuku -->
+    <string name="shizuku_label">Shizuku:</string>
+    <string name="shizuku_status_ready">Ready</string>
+    <string name="shizuku_status_not_installed">Not installed</string>
+    <string name="shizuku_status_not_running">Not running</string>
+    <string name="shizuku_status_permission_needed">Permission needed</string>
+    <string name="btn_shizuku_req">Request permission</string>
+    <string name="btn_shizuku_open">Open Shizuku</string>
+
+    <!-- Root -->
+    <string name="root_label">Root (su):</string>
+    <string name="root_status_available">Available</string>
+    <string name="root_status_unavailable">Not available</string>
+
+    <!-- Permissions -->
+    <string name="perm_overlay">Overlay permission:</string>
+    <string name="perm_notifications">Notification permission:</string>
+    <string name="perm_all_files">All files access:</string>
+
+    <!-- Option Editor -->
+    <string name="edit_option_title_new">Add Replacement Option</string>
+    <string name="edit_option_title_edit">Edit Replacement Option</string>
+    <string name="hint_option_name">Option Name (e.g. Mod Replace)</string>
+    <string name="hint_source_path">Source file or folder path</string>
+    <string name="hint_dest_path">Destination path</string>
+    <string name="hint_dest_example">e.g. /sdcard/Android/data/com.game.name/files/data.xml</string>
+    <string name="hint_pkg_name">Target package name (auto-detected if empty)</string>
+    <string name="chk_force_stop">Kill &amp; force-stop app before replace (am force-stop + pkill)</string>
+    <string name="chk_backup">Backup original as .bak (first time only)</string>
+    <string name="chk_fix_perms">Fix ownership &amp; permissions after copy</string>
+    <string name="btn_browse_file">Browse file</string>
+    <string name="btn_pick_folder">Pick folder</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_test">Test</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_delete">Delete</string>
+    <string name="helper_source_note">Keep source files in /sdcard/Download or /sdcard/QuickReplacer for best reliability.</string>
+
+    <!-- Floating Service -->
+    <string name="fgs_notification_title">Quick Replacer is active</string>
+    <string name="fgs_notification_text">Tap floating button over other apps to swap files</string>
+    <string name="fgs_action_stop">Stop</string>
+    <string name="empty_options_overlay">No options yet. Tap the gear to add.</string>
+
+    <!-- Guide -->
+    <string name="setup_guide_title">Built-in ADB Setup Guide</string>
+    <string name="setup_guide_content">1. Connect to any Wi-Fi network (a personal hotspot or offline router works fine).\n\n2. Go to Settings → About phone → tap \"Build number\" 7 times to enable Developer options.\n\n3. In Developer options, turn ON \"Wireless debugging\".\n\n4. Tap \"Pair device with pairing code\" inside Wireless debugging. Note the 6-digit code and port.\n\n5. In Quick Replacer, tap \"Pair\" and enter the port and 6-digit code (you can also use the floating prompt or notification so you don\'t close the pairing screen).\n\n6. Once paired, tap \"Connect\" (or let Auto-connect discover the port). Wireless debugging is paired permanently until turned off.</string>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.QuickReplacer" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:windowBackground">@color/qr_background</item>
+        <item name="android:colorBackground">@color/qr_background</item>
+        <item name="colorPrimary">@color/qr_primary</item>
+        <item name="colorSecondary">@color/qr_primary_dark</item>
+        <item name="colorSurface">@color/qr_surface</item>
+        <item name="colorOnSurface">@color/qr_text_primary</item>
+        <item name="colorOnPrimary">@color/qr_background</item>
+        <item name="android:statusBarColor">@color/qr_background</item>
+        <item name="android:navigationBarColor">@color/qr_background</item>
+    </style>
+
+    <style name="Theme.QuickReplacer.Dialog" parent="Theme.Material3.Dark.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="colorSurface">@color/qr_surface</item>
+        <item name="colorOnSurface">@color/qr_text_primary</item>
+    </style>
+</resources>

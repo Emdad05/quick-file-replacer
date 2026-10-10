@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="qr_background">#0F172A</color>
+    <color name="qr_surface">#1E293B</color>
+    <color name="qr_surface_card">#24334C</color>
+    <color name="qr_surface_card_stroke">#334155</color>
+    <color name="qr_primary">#38BDF8</color>
+    <color name="qr_primary_dark">#0284C7</color>
+    <color name="qr_accent_success">#10B981</color>
+    <color name="qr_accent_warning">#F59E0B</color>
+    <color name="qr_accent_error">#F43F5E</color>
+    <color name="qr_text_primary">#F8FAFC</color>
+    <color name="qr_text_secondary">#94A3B8</color>
+    <color name="qr_text_muted">#64748B</color>
+    <color name="qr_chip_bg">#293B56</color>
+    <color name="qr_overlay_bg">#E6111827</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

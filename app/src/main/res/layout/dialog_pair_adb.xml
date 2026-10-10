@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_card"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dialog_pair_title"
+        android:textColor="@color/qr_text_primary"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="16dp"
+        android:text="From Developer options → Wireless debugging → Pair device with pairing code:"
+        android:textColor="@color/qr_text_secondary"
+        android:textSize="12sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_pair_port"
+        style="@com.google.android.material.R.style.Widget_Material3_TextInputLayout_OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:hint="@string/dialog_pair_port_hint"
+        app:boxStrokeColor="@color/qr_primary"
+        app:hintTextColor="@color/qr_primary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_pair_port"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textColor="@color/qr_text_primary" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_pair_code"
+        style="@com.google.android.material.R.style.Widget_Material3_TextInputLayout_OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/dialog_pair_code_hint"
+        app:boxStrokeColor="@color/qr_primary"
+        app:hintTextColor="@color/qr_primary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_pair_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textColor="@color/qr_text_primary" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_pair_cancel"
+            style="@com.google.android.material.R.style.Widget_Material3_Button_TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="@string/btn_cancel"
+            android:textColor="@color/qr_text_secondary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_pair_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pair &amp; Connect"
+            android:textColor="@color/qr_background"
+            app:backgroundTint="@color/qr_primary"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+</LinearLayout>
